@@ -1,0 +1,89 @@
+/* diary.css */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+body {
+    font-family: 'Handlee',cursive;
+    background-color: #f0f0f0; /* keep your background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background:url(fpg.jpg) repeat;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+    width: 320px;
+    max-height: 550px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Spiral binding effect */
+.container::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 15px;
+    bottom: 15px;
+    width: 10px;
+    background: repeating-radial-gradient(
+        circle,
+        #6d6d6d 0px,
+        #6d6d6d 3px,
+        transparent 4px,
+        transparent 14px
+    );
+}
+
+h2 {
+    text-align: center;
+}
+
+.logout {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+#savedMsg {
+    color: #2c2c2c; /* dark gray for readability */
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.7); /* light backdrop so text pops */
+    padding: 5px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
